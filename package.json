@@ -23,6 +23,7 @@
     "@angular/router": "~7.2.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.4",
+    "dayjs": "^1.8.14",
     "ngx-file-uploader": "git+https://github.com/enyachoke/ngx-file-uploader.git#0.0.9",
     "ngx-openmrs-formentry": "git+https://github.com/AMPATH/ngx-openmrs-formentry.git#v2.12.2",
     "rxjs": "~6.3.3",
