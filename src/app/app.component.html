@@ -1,20 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<div class="row">
   <div>
-   Form Entry
+    Form Entry
   </div>
-  <div class="container-fluid">
+  <div class="col-md-12">
     <div class="text-center">
       <button class="btn btn-success btn-lg"
         (click)="toggleEncounterViewer()">{{!showingEncounterViewer ? 'Show Encounter Viewer' : 'Show Form Renderer'}}</button>
     </div>
-
+    <div *ngIf="saved" class="alert alert-success" role="alert">
+        Encounter Saved
+      </div>
+      <div  *ngIf="error" class="alert alert-danger" role="alert">
+        {{error}}
+      </div>
     <div *ngIf="!showingEncounterViewer">
       <error-renderer [form]="form"></error-renderer>
       <form [formGroup]="form.rootNode.control">
         <form-renderer [node]="form.rootNode"></form-renderer>
         <div class="form-row">
-          <button type="submit" (click)="onSubmit($event)">Save</button>
+           
+          <button class="btn btn-primary" type="submit" (click)="onSubmit($event)">Save</button>
         </div>
       </form>
     </div>
